@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Set the size and position of the image */
+    #moving-image {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+    }
+
+    /* Define the animation */
+    @keyframes move-around {
+      0% { top: 0; left: 0; }
+      25% { top: 0; left: calc(100% - 100px); }
+      50% { top: calc(100% - 100px); left: calc(100% - 100px); }
+      75% { top: calc(100% - 100px); left: 0; }
+      100% { top: 0; left: 0; }
+    }
+
+    /* Apply the animation to the image */
+    #moving-image {
+      animation: move-around 10s infinite;
+    }
+  </style>
+</head>
+<body>
+  <!-- Place the image inside a container -->
+  <div id="container">
+    <img id="moving-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ0jRldDi8vURzSqxGK1rdwz07zwSD5bHW_Y7hUEFKxg&s=" alt="Moving Image">
+  </div>
+</body>
+</html>
